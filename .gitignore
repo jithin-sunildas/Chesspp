@@ -1,0 +1,5 @@
+# Ignore system/editor configs
+.vscode/
+
+# Ignore bin files
+chess
