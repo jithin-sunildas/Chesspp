@@ -1,9 +1,0 @@
-{
-  "files.associations": {
-    "*.dbclient-js": "javascript",
-    "chrono": "cpp",
-    "ranges": "cpp",
-    "variant": "cpp"
-  },
-  "C_Cpp.errorSquiggles": "disabled"
-}
