@@ -118,11 +118,11 @@ private:
 
 class Queen {
 public:
-    Queen(Color clr, int row, int col, int index)
+    Queen(Color clr, int row, int col)
         : side(clr) {
         queen.x = row;
         queen.y = col;
-        queen.index = index;
+        queen.index = 1;
     }
 private:
     Piece queen;
@@ -131,11 +131,11 @@ private:
 
 class King {
 public:
-    King(Color clr, int row, int col, int index)
+    King(Color clr, int row, int col)
         : side(clr) {
         king.x = row;
         king.y = col;
-        king.index = index;
+        king.index = 1;
     }
 private:
     Piece king;
