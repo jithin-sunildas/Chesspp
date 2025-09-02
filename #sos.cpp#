@@ -1,7 +1,7 @@
-#include <fstream>
-#include <ios>
-#include <iostream>
-#include <sstream>
+
+
+
+
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -141,12 +141,6 @@ void SosEngine(std::vector<Cell> &ops_moves, std::vector<Cell> &self_moves, Cell
         // decided_cell = partner
     } else if (/*last_move in threat_list*/) {
     }
-
-    // learn iteration thru std::vector
-    // do iteration
-    // find partner
-    // align conde
-    // make ui
 
     self_moves.push_back(decided_cell);
     write_to_file(decided_cell);
