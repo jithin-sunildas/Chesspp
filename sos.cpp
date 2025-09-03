@@ -1,6 +1,7 @@
 #include <fstream>
 #include <ios>
 #include <iostream>
+#include <numeric>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -130,14 +131,48 @@ std::vector<Cell> list_threat(Cell cell) {
     return threat;
 }
 
+int match(std::vector<Cell> a, std::vector<Cell> b) {
+    for (Cell i : a) {
+        for (Cell j : b) {
+            if (i.row == j.row && i.col == j.col) {
+                return 1;
+
+            } else
+                return 0;
+        }
+    }
+}
+
+int match(Cell a, std::vector<Cell> b) {
+    for (Cell i : b) {
+        if (a.row == i.row && a.col == i.col) {
+            return 1;
+
+        } else
+            return 0;
+    }
+}
+
+Cell partner(std::vector<Cell> self_moves, std::vector<Cell> threat_list) {
+    for (Cell i : threat_list) {
+        for (Cell j : self_moves) {
+            if (i.row == j.row && i.col == j.col) {
+                if (i.row) {
+                }
+            } else
+        }
+    }
+}
+
 void SosEngine(std::vector<Cell> &ops_moves, std::vector<Cell> &self_moves, Cell last_move) {
     Cell decided_cell;
     std::vector<Cell> target_list = list_threat(self_moves.back());
     std::vector<Cell> threat_list = list_threat(last_move);
 
     // Check if any of our moves is in target list, then we can win in one move.
-    if (/* self_moves.iter() in target_list*/) {
+    if (match(target_list, self_moves)) {
         // find partner
+        decided_cell = partner(self_moves.back(), target_list);
         // decided_cell = partner
     } else if (/*last_move in threat_list*/) {
     }
